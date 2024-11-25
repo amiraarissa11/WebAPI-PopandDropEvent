@@ -1,0 +1,170 @@
+﻿@*
+    For more information on enabling MVC for empty projects,
+    visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "About Us";
+}
+<head>
+    <title>CSS Website Layout</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        * {
+          box-sizing: border-box;
+        }
+
+        .header {
+            padding: 30px;
+            text-align: center;
+            background: #50060c;
+        }
+
+         .header h1 {
+             color: white;
+             font-size: 80px;
+             font-family: "Times New Roman", Times, serif;
+         }
+
+        .header h4 {
+            color: white;
+            font-size: 80px;
+            font-family: "Times New Roman", Times, serif;
+        }
+
+        /* Create three equal columns that floats next to each other */
+        .column {
+          float: left;
+          width: 33.33%;
+          padding: 15px;
+        }
+
+        /* Clear floats after the columns */
+        .row::after {
+          content: "";
+          display: table;
+          clear: both;
+        }
+
+        /* Responsive layout - makes the three columns stack on top
+        of each other instead of next to each other */
+        .media screen and (max-width:600px) {
+          .column {
+            width: 100%;
+          }
+        }
+    </style>
+</head>
+
+
+<body>
+    <div class="header">
+        <h4>About Us</h4>
+    </div>
+
+    <div class="row">
+        <div class="column">
+            <p>
+                Pop and Drop: A Book Donation Event is a place where people can donate their unused books to us. 
+                We are accept all genres book. 
+                We wanted to donate the books to people in need and any library organization that in need new book genre from us.
+                So make sure every pages of book you give to us is in a good condition ya!
+            </p>
+        </div>
+
+        <div class="column">
+            <p>
+                At Pop and Drop: A Book Donation Event, we believe in the power of stories and the importance of literacy.
+                Our pop-up book donation events create opportunities to give unused books a second life, 
+                connecting them with those eager to learn and grow
+            </p>
+        </div>
+
+        <div class="column">
+            <p>
+                We are passionate about spreading the joy of reading and making a difference in our community,
+                which is why we host pop-up book donation events to connect unused books with those who need them the most,
+                fostering education, literacy, and a love for stories.
+            </p>
+        </div>
+    </div>
+
+    <section id="instagram">
+        <div class="container">
+            <div class="text-center mb-4">
+                <h3>Pop-Up Events That Have Been Held</h3>
+            </div>
+            <div class="row">
+                <div class="col-md-2">
+                    <figure class="instagram-item position-relative rounded-3">
+                            <div class="icon-overlay position-absolute d-flex justify-content-center">
+                                <svg class="instagram">
+                                    <use xlink:href="#instagram"></use>
+                                </svg>
+                            </div>
+                            <img src="images/event1.jpeg" alt="instagram" class="img-fluid rounded-3 insta-image">
+                        </>
+                    </figure>
+                </div>
+
+                <div class="col-md-2">
+                    <figure class="instagram-item position-relative rounded-3">
+                            <div class="icon-overlay position-absolute d-flex justify-content-center">
+                                <svg class="instagram">
+                                    <use xlink:href="#instagram"></use>
+                                </svg>
+                            </div>
+                            <img src="images/event2.jpeg" alt="instagram" class="img-fluid rounded-3 insta-image">
+                        </a>
+                    </figure>
+                </div>
+
+                <div class="col-md-2">
+                    <figure class="instagram-item position-relative rounded-3">
+                            <div class="icon-overlay position-absolute d-flex justify-content-center">
+                                <svg class="instagram">
+                                    <use xlink:href="#instagram"></use>
+                                </svg>
+                            </div>
+                            <img src="images/event3.jpeg" alt="instagram" class="img-fluid rounded-3 insta-image">
+                        </a>
+                    </figure>
+                </div>
+
+                <div class="col-md-2">
+                    <figure class="instagram-item position-relative rounded-3">
+                            <div class="icon-overlay position-absolute d-flex justify-content-center">
+                                <svg class="instagram">
+                                    <use xlink:href="#instagram"></use>
+                                </svg>
+                            </div>
+                            <img src="images/event4.jpeg" alt="instagram" class="img-fluid rounded-3 insta-image">
+                        </a>
+                    </figure>
+                </div>
+                <div class="col-md-2">
+                    <figure class="instagram-item position-relative rounded-3">
+                            <div class="icon-overlay position-absolute d-flex justify-content-center">
+                                <svg class="instagram">
+                                    <use xlink:href="#instagram"></use>
+                                </svg>
+                            </div>
+                            <img src="images/event5.png" alt="instagram" class="img-fluid rounded-3 insta-image">
+                        </a>
+                    </figure>
+                </div>
+                <div class="col-md-2">
+                    <figure class="instagram-item position-relative rounded-3">
+                            <div class="icon-overlay position-absolute d-flex justify-content-center">
+                                <svg class="instagram">
+                                    <use xlink:href="#instagram"></use>
+                                </svg>
+                            </div>
+                            <img src="images/event6.jpg" alt="instagram" class="img-fluid rounded-3 insta-image">
+                        </a>
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>

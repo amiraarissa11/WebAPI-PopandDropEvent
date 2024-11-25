@@ -1,0 +1,96 @@
+﻿@model IEnumerable<BookDonorsAPI.Models.Book>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td, th {
+            border: 1px solid #edc3d4;
+            text-align: left;
+            padding: 8px;
+
+        }
+
+        tr:nth-child(even) {
+            background-color: #edc3d4;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 5px 15px;
+            font-size: 16px;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            outline: none;
+            color: #fff;
+            background-color: #fbb4d8;
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 9px #999;
+        }
+
+        .button:hover {
+            background-color: #fbb4d8
+        }
+
+        .button:active {
+            background-color: #fbb4d8;
+            box-shadow: 0 5px #666;
+            transform: translateY(4px);
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+<h2>List of Donated Books</h2>
+    <table class="table-danger">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Genre</th>
+            <th>YearPublished</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var book in Model)
+        {
+            <tr>
+                <td>@book.Tittle</td>
+                <td>@book.Author</td>
+                <td>@book.Genre</td>
+                <td>@book.YearPublished</td>
+                <td>
+
+
+                        <button class="button">
+                            <a asp-action="Edit" asp-route-id="@book.ID">Edit</a>
+                        </button>
+                        <button class="button">
+                            <a asp-action="Delete" asp-route-id="@book.ID">Delete</a>
+                            </button>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+    <p></p>
+    <p></p>
+
+    <button class="button"> 
+        <a asp-action="Create">Add New Book Here!</a>
+        </button>
+</body>
+</html>

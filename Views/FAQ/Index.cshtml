@@ -1,0 +1,171 @@
+﻿@*
+    For more information on enabling MVC for empty projects,
+    visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "FAQ";
+}
+<head>
+    <title>CSS Website Layout</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .header {
+            padding: 30px;
+            text-align: center;
+            background: #50060c;
+        }
+
+            .header h1 {
+                color: white;
+                font-size: 80px;
+                font-family: "Times New Roman", Times, serif;
+            }
+
+            .header h4 {
+                color: white;
+                font-size: 80px;
+                font-family: "Times New Roman", Times, serif;
+            }
+
+        /* Create three equal columns that floats next to each other */
+        .column {
+            float: left;
+            width: 33.33%;
+            padding: 15px;
+        }
+
+        /* Clear floats after the columns */
+        .row::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* Responsive layout - makes the three columns stack on top
+                of each other instead of next to each other */
+        .media screen and (max-width:600px) {
+            .column
+
+        {
+            width: 100%;
+        }
+
+        }
+
+        .accordion {
+            background-color: #eee;
+            color: #444;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 15px;
+            transition: 0.4s;
+        }
+
+            .active, .accordion:hover {
+                background-color: #ccc;
+            }
+
+            .accordion:after {
+                content: '\002B';
+                color: #777;
+                font-weight: bold;
+                float: right;
+                margin-left: 5px;
+            }
+
+        .active:after {
+            content: "\2212";
+        }
+
+        .panel {
+            padding: 0 18px;
+            background-color: white;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+    <h2>FAQ</h2>
+   
+    <button class="accordion">What types of books can I donate?</button>
+    <div class="panel">
+        <p>We accept books of all genres and for all age groups, including novels, textbooks, children’s books, and nonfiction. 
+            However, please ensure that the books are in good condition—no torn, stained, or heavily damaged books, please.</p>
+    </div>
+
+    <button class="accordion">Where will the event be held?</button>
+    <div class="panel">
+        <p>The pop-up event will be at  “Central Market, Booth 5”, date and time will be inform soon. 
+            Check our website or social media for updates!</p>
+    </div>
+
+    <button class="accordion">Can I donate more than one book?</button>
+    <div class="panel">
+        <p>Absolutely! There’s no limit to how many books you can donate. Every contribution helps.</p>
+    </div>
+
+    <button class="accordion">Who will benefit from my donation?</button>
+    <div class="panel">
+        <p>Your donated books will go to schools, libraries, community centers, 
+            and nonprofit organizations that promote literacy and education. 
+            Some books may also go to individuals or families in need.</p>
+    </div>
+
+    <button class="accordion">Is there a fee to participate in the event?</button>
+    <div class="panel">
+        <p>
+            No, the event is completely free to attend and donate. 
+            We’re grateful for your support in helping us spread the joy of reading!
+        </p>
+    </div>
+
+    <button class="accordion">Can I donate books at a different time if I miss the pop-up event?</button>
+    <div class="panel">
+        <p>
+            Yes, we also accept donations outside the event. 
+            Please contact us at popandropbookinfo@gmail.com or +6019 225 8475 to arrange a convenient drop-off.
+        </p>
+    </div>
+
+    <button class="accordion">Do you accept other items besides books?</button>
+    <div class="panel">
+        <p>
+            Currently, we’re focused on books. However, some of our partnered organizations might accept
+            other educational materials. Feel free to reach out for more details!
+        </p>
+    </div>
+
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+          acc[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.maxHeight) {
+              panel.style.maxHeight = null;
+            } else {
+              panel.style.maxHeight = panel.scrollHeight + "px";
+            }
+          });
+        }
+    </script>
+
+</body>
+</html>
